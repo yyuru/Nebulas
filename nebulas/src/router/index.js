@@ -1,7 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-Vue.use(Router)
+import Main from '../Main/Main.vue'
 
+Vue.use(Router)
+// 主页
 export default new Router({
-  routes: []
+  routes: [
+    {
+      path: '/',
+      redirect: '/main'
+    },
+    {
+      path: '/main',
+      component: Main
+    }
+  ]
 })
