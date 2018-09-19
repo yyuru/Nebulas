@@ -1,13 +1,13 @@
 <template>
-  <div id="app" @mousemove="mouse" @click="click">
+  <div id="app">
     <router-view/>
-    <Mouse :style="{top:location.y+'px',left:location.x+'px'}" />
+    <!-- <Mouse :style="{top:location.y+'px',left:location.x+'px'}" /> -->
   </div>
 
 </template>
 
 <script>
-import Mouse from './components/Mouse.vue'
+// import Mouse from './components/Mouse.vue'
 export default {
   name: 'Nebulas',
   data(){
@@ -19,7 +19,6 @@ export default {
     }
   },
   components:{
-    Mouse
   },
   methods:{
     mouse:function(e){

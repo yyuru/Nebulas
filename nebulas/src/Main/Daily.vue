@@ -13,7 +13,8 @@ export default {
     position absolute
     width 100%
     height 100%
-    box-shadow 0 20px 30px 0 #ccc
+    box-shadow -10px 20px 30px 0 #ccc
     transition all 1s 
+    cursor pointer
   }
 </style>
