@@ -5,9 +5,7 @@
         v-for="day in days" 
         :key="day.index" 
         :style="{
-          zIndex:(days.length-day.index),
-          background:`url(${day.imgUrl}) center`,
-          backgroundSize:'cover'
+          zIndex:(days.length-day.index)
         }"
         @mouseenter.native="getout(day.index,$event)" 
         @mouseout.native="getin(day.index,$event)"
@@ -17,7 +15,22 @@
 </template>
 <script>
 import Daily from './Daily.vue'
+import { mapActions } from 'vuex';
 export default {
+  mounted() {
+    this.days.forEach((item,index)=>{
+      const d=document.getElementById("d");
+      let img=new Image();
+      img.src=item.imgUrl;
+      img.onload=()=>{
+        d.children[index].style.backgroundImage=`url(${item.imgUrl})`
+      }
+    })
+    window.onload=()=>{
+      setTimeout(()=>{this.setLoading(false);},3000);
+      
+    }
+  },
   components:{
     Daily
   },
@@ -80,7 +93,10 @@ export default {
       }else{
         e.target.style.transform=`scale(${1-i*0.05},${1-i*0.05}) translateX(${i*100}px)`
       }
-    }
+    },
+    ...mapActions([
+      'setLoading'
+    ])
   }
 }
 </script>

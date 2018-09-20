@@ -7,6 +7,7 @@ import router from './router'
 import store from './store'
 // 全局样式
 import './assets/styles/global.styl'
+import 'animate.css'
 // Vue.use(Vuex)
 Vue.config.productionTip = false
 

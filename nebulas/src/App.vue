@@ -2,12 +2,20 @@
   <div id="app">
     <router-view/>
     <!-- <Mouse :style="{top:location.y+'px',left:location.x+'px'}" /> -->
+    <transition
+      leave-active-class="animated rotateOutDownLeft"
+      enter-active-class="animated rotateInDownLeft"
+    >
+        <Loading v-if="loading" />
+    </transition>
   </div>
 
 </template>
 
 <script>
 // import Mouse from './components/Mouse.vue'
+import Loading from './components/Loading'
+import {mapGetters} from 'vuex'
 export default {
   name: 'Nebulas',
   data(){
@@ -18,7 +26,13 @@ export default {
       }
     }
   },
+  computed:{
+    ...mapGetters([
+      'loading'
+    ])
+  },
   components:{
+    Loading
   },
   methods:{
     mouse:function(e){
