@@ -11,7 +11,8 @@ export default {
 </script>
 <style lang="stylus" scoped>
   #Mouse{
-    z-index 0
+    z-index 99
+    pointer-events none
     position absolute 
     width 50px
     height 50px

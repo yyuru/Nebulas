@@ -11,10 +11,12 @@
         @mouseout.native="getin(day.index,$event)"
       />
     </div>
+    <PageNum />
   </div>
 </template>
 <script>
 import Daily from './Daily.vue'
+import PageNum from './PageNum'
 import { mapActions } from 'vuex';
 export default {
   mounted() {
@@ -32,7 +34,8 @@ export default {
     }
   },
   components:{
-    Daily
+    Daily,
+    PageNum
   },
   data(){
     return {
@@ -85,7 +88,7 @@ export default {
       console.log(i)
       
       if(i==0){
-        e.target.parentNode.style.left='30%';
+        e.target.parentNode.style.left='40%';
         this.days.forEach((item,i)=>{
           e.target.parentNode.children[i].style.transform=""
         });
@@ -110,12 +113,13 @@ export default {
     border 1px solid black
     #d{
       position absolute
-      left 30%
+      left 40%
       right 0
-      top 50px
+      top 0px
       width 60%
       height 80%
       transition all 0.5s
     }
+    
   }
 </style>

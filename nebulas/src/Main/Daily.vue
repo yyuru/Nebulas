@@ -15,7 +15,7 @@ export default {
     height 100%
     box-shadow -10px 20px 30px 0 #ccc
     transition all 1s 
-    cursor pointer
+    
     background-size cover
   }
 </style>
