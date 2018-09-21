@@ -11,7 +11,7 @@ export default {
 <style lang="stylus" scoped>
   #Music{
     position  absolute
-    left 30px
+    left 12vw
     bottom 30px
     height 50px
     width 50px

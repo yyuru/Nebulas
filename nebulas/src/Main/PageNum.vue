@@ -16,13 +16,13 @@ export default {
       right 40px
       width 140px
       height 50px
-      
       line-height 50px
       font-family FFj
       font-size 30px
       font-weight 900
       #page-index{
         font-size 50px  
+        color #d14733
       }
     }
 </style>
