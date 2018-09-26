@@ -1,7 +1,7 @@
 <template>
   <div id="Main">
     <div id="pic">
-      <img src="../../static/pic/bg.jpg" alt="" srcset="">
+      <img src="../../static/pic/bg2.jpg" alt="" srcset="">
     </div> 
     <div id="name">
       <i>NEBULAS</i>
@@ -132,7 +132,7 @@ export default {
     left 0
     right 0
     bottom 0
-    top 50px
+    top 80px
     border 1px solid black
     #pic{
       position absolute
@@ -144,7 +144,7 @@ export default {
       overflow hidden
       img{
         height 100%
-        margin-left -11vw
+        margin-left -13vw
         filter blur(1px)
       }
     }

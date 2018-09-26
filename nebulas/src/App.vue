@@ -1,5 +1,6 @@
 <template>
   <div id="app" @mousemove="mouse" @click="click" onselectstart="return false">
+    <TopBar />
     <router-view/>
     <Mouse :style="{top:location.y+'px',left:location.x+'px'}" />
     <transition
@@ -14,7 +15,8 @@
 </template>
 
 <script>
- import Mouse from './components/Mouse.vue'
+import TopBar from './components/TopBar/TopBar.vue'
+import Mouse from './components/Mouse.vue'
 import Loading from './components/Loading'
 import Music from './components/Music'
 import {mapGetters} from 'vuex'
@@ -36,7 +38,8 @@ export default {
   components:{
     Loading,
     Music,
-    Mouse
+    Mouse,
+    TopBar
   },
   methods:{
     mouse:function(e){
