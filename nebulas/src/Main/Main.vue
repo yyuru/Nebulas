@@ -78,7 +78,7 @@ export default {
     getout:function(i,e){
       let name=document.getElementById('name');
       let some=document.getElementById('some');
-      name.style.left='-40vh';
+      name.style.left='-35vh';
       name.style.top='25vh';
       name.style.transform='rotate(-90deg)';
       some.style.opacity=0
@@ -150,11 +150,11 @@ export default {
     }
     #name{
       transform rotate(0deg)
-      font-size 100px
+      font-size 5rem
       position absolute
       left 0
       top 0px
-      width 100vh
+      width 83vh
       height 15vw
       line-height 15vw
       font-family FFj
@@ -174,7 +174,7 @@ export default {
       text-align right
       opacity 1 
       transition all 1s 0.5s
-      font-size 30px
+      font-size 1.4rem
       &>p>span{
         font-size 40px
         font-family FFj
